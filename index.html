@@ -8,21 +8,63 @@
   <body>
     <!-- Header -->
     <header>
-      <nav>
-        <a href="/">
-          <img src="./images/logo.svg" />
-        </a>
+      <a href="/">
+        <img src="./images/logo.svg" />
+      </a>
 
+      <ul>
+        <li>
+          <a
+            href="google.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Google link"
+            title="Google"
+            >G</a
+          >
+        </li>
+        <li>
+          <a
+            href="instagram.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Instagram link"
+            title="Instagram"
+            >I</a
+          >
+        </li>
+        <li>
+          <a
+            href="linkedin.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Lonkedin link"
+            title="linkedin"
+            >In</a
+          >
+        </li>
+      </ul>
+
+      <nav>
         <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Specialists</a></li>
-          <li><a href="">For patients</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#specialists">Specialists</a></li>
+          <li><a href="#forpatients">For patients</a></li>
           <li><a href="">Contacts</a></li>
         </ul>
       </nav>
 
-      <a href="">Request a call</a>
+      <div>
+        <address>
+          Kharkov, <br />
+          Pushkinskaya 1A
+        </address>
+        <p>from 09:00 - 20:00 <span>Mon-Sat</span></p>
+        <a href="tel:+79003331040" title="Clinic phone number">+7900 333 10 40 </a>
+      </div>
+
+      <button type="button">Request a call</button>
     </header>
 
     <!-- Main -->
@@ -31,7 +73,7 @@
       <div>
         <section>
           <p>Dentistry Christian-San</p>
-          <h1>Same day dental treatment</h1>
+          <h1 id="about">Same day dental treatment</h1>
           <p>
             We will provide a full consultation, professional oral hygiene, treatment of teeth and
             gums
@@ -57,7 +99,7 @@
 
       <!-- Services -->
       <section>
-        <h2>Services</h2>
+        <h2 id="services">Services</h2>
         <p>
           We tried to make a price <br />
           as simple and understandable as possible.
@@ -126,6 +168,34 @@
         </ul>
       </section>
 
+      <!-- braces -->
+      <section>
+        <h2 id="forpatients">
+          When fixing braces on both jaws, receive a certificate for 7,000 hryvnia
+        </h2>
+        <p>
+          Enter your phone number, we will call you back and select a convenient appointment time
+          for you. Or call us yourself -
+          <a href="tel:+79003331040" title="Clinic phone number">+7 900 333 10 40</a>
+        </p>
+
+        <form>
+          <input type="text" placeholder="number" />
+          <button type="submit">Make an appointment</button>
+        </form>
+
+        <p>
+          By signing up for the service you consent to
+          <a href="">the processing of your personal data</a>
+        </p>
+
+        <img
+          src="./images/woman-dentist.png"
+          alt="Women dentist is holding dental tool"
+          width="752"
+        />
+      </section>
+
       <!-- Treatment -->
       <section>
         <h2>Treatment with us</h2>
@@ -175,7 +245,7 @@
 
       <!-- Specialists -->
       <section>
-        <h2>Specialists</h2>
+        <h2 id="specialists">Specialists</h2>
         <p>
           Simple and painless, providing <br />
           the full range of dental services
@@ -214,9 +284,92 @@
           </li>
         </ul>
       </section>
+
+      <!-- Certificates -->
+      <section>
+        <h2>Certificates, awards and diplomas</h2>
+
+        <div>
+          <img src="./images/certificate.png" alt="certificate 1" width="538" />
+          <img src="./images/certificate.png" alt="certificate 2" width="538" />
+          <img src="./images/certificate.png" alt="certificate 3" width="538" />
+        </div>
+      </section>
+
+      <!-- Online consultation -->
+      <section>
+        <h2>
+          Online consultation with a specialist via audio and video communication free of charge.
+        </h2>
+        <p>
+          Enter your phone number, we will call you back and select a convenient appointment time
+          for you. Or call us yourself -
+          <a href="tel:+79003331040" title="Clinic phone number">+7 900 333 10 40</a>
+        </p>
+
+        <form>
+          <input type="text" placeholder="number" />
+          <button type="submit">Make an appointment</button>
+        </form>
+
+        <p>
+          By signing up for the service you consent to
+          <a href="" title="Processing of personal data">the processing of your personal data</a>
+        </p>
+
+        <img
+          src="./images/dentist.png"
+          alt="Women dentist is holding dental tool and making phone"
+          width="764"
+        />
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer>
+      <ul>
+        <li>
+          <a
+            href="google.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Google link"
+            title="Google"
+            >G</a
+          >
+        </li>
+        <li>
+          <a
+            href="instagram.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Instagram link"
+            title="Instagram"
+            >I</a
+          >
+        </li>
+        <li>
+          <a
+            href="linkedin.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Lonkedin link"
+            title="linkedin"
+            >In</a
+          >
+        </li>
+      </ul>
+
+      <div>
+        <p>Dent LLC, license No. LO-86-8681-01868686047 dated February 13, 2023.</p>
+        <p>&copy; 2018-2021</p>
+      </div>
+
+      <a href="" title="Processing of personal data"
+        >Policy regarding the processing of personal data</a
+      >
+
+      <img src="./images/logo.svg" />
+    </footer>
   </body>
 </html>
