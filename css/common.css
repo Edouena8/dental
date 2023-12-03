@@ -1,0 +1,32 @@
+:root {
+  --primary-text-color: rgba(115, 115, 115, 1);
+  --secondary-text-color: rgba(69, 69, 69, 1);
+  --additional-text-color: rgba(38, 38, 38, 1);
+  --primary-content-color: rgba(26, 52, 68, 1);
+  --secondary-content-color: rgba(78, 78, 78, 1);
+  --additional-content-color: rgba(36, 36, 36, 1);
+  --title-text-color: rgba(18, 53, 75, 1);
+  --secondary-title-color: rgba(0, 0, 0, 1);
+  --additional-title-color: rgba(39, 39, 39, 1);
+  --primary-subtitle-color: rgba(34, 34, 34, 1);
+  --secondary-subtitle-color: rgba(54, 54, 54, 1);
+  --hero-primary-text-color: rgba(111, 111, 111, 1);
+  --hero-secondary-text-color: rgba(78, 78, 78, 1);
+  --hero-description: rgba(75, 75, 75, 1);
+  --offers-description: rgba(41, 41, 41, 1);
+  --doc-descr-color: rgba(62, 62, 62, 1);
+  --accent-text-color: rgba(1, 103, 138, 1);
+  --secondary-accent-text-color: rgba(0, 121, 255, 1);
+  --additional-accent-text-color: rgba(56, 188, 234, 1);
+  --primary-white-color: #ffffff;
+  --accent-bg-color: rgba(56, 188, 234, 1);
+}
+
+body {
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+}
+
+.list {
+  list-style: none;
+}

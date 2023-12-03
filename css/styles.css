@@ -1,0 +1,125 @@
+/* Site nav */
+.site-nav .link {
+  color: rgba(170, 170, 170, 1);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-text-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-text-color);
+}
+
+/* Hero */
+
+.hero .subtitle {
+  color: var(--content-color);
+}
+
+.hero .title {
+  color: var(--primary-content-color);
+}
+
+.hero .text {
+  color: var(--hero-primary-text-color);
+}
+
+.hero-list .descr {
+  color: var(--hero-description);
+}
+/* Section */
+.section-title {
+  color: var(--title-text-color);
+}
+
+.braces > .section-title,
+.consult > .section-title {
+  color: var(--secondary-title-color);
+}
+
+.offers > .section-title {
+  color: var(--additional-title-color);
+}
+
+.section-descr {
+  color: var(--primary-text-color);
+}
+
+/* Button */
+
+.button {
+  border: 1px solid black;
+}
+
+.button.primary {
+  background-color: var(--accent-bg-color);
+  color: var(--primary-white-color);
+  border-color: transparent;
+}
+
+.button.secondary {
+  color: var(--accent-text-color);
+  background-color: var(--primary-white-color);
+  border-color: blue;
+}
+
+/* services */
+.services-text {
+  color: var(--secondary-text-color);
+}
+
+.offers-list .num {
+  color: var(--additional-accent-text-color);
+}
+
+.offers-list .subtitle {
+  color: var(--primary-subtitle-color);
+}
+
+.offers-list .text {
+  color: var(--offers-description);
+}
+
+/* Braces */
+
+.recall-descr {
+  color: var(--additional-text-color);
+}
+
+.recall-link {
+  color: var(--secondary-accent-text-color);
+}
+
+.agree-text,
+.agree-link {
+  color: var(--secondary-content-color);
+}
+
+/* treatment */
+
+.logo-text {
+  color: var(--primary-content-color);
+}
+
+.treatment .text {
+  color: var(--additional-content-color);
+}
+
+/* Specialists */
+
+.doc-list .title {
+  color: var(--secondary-subtitle-color);
+}
+
+.doc-list .descr {
+  color: var(--doc-descr-color);
+}
+
+/* Footer */
+
+.footer .text {
+  color: var(--secondary-title-color);
+}
+
