@@ -5,6 +5,8 @@
   --primary-content-color: rgba(26, 52, 68, 1);
   --secondary-content-color: rgba(78, 78, 78, 1);
   --additional-content-color: rgba(36, 36, 36, 1);
+  --address-color: rgba(71, 71, 71, 1);
+  --phone-link-color: rgba(60, 60, 60, 1);
   --title-text-color: rgba(18, 53, 75, 1);
   --secondary-title-color: rgba(0, 0, 0, 1);
   --additional-title-color: rgba(39, 39, 39, 1);
@@ -25,6 +27,9 @@
 body {
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
+
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
 }
 
 .list {
