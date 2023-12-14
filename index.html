@@ -10,69 +10,77 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <a href="/" class="logo">
-        <img src="./images/logo.svg" />
-      </a>
+    <header class=" ">
+      <div class="container wrap">
+        <a href="/" class="logo">
+          <img src="./images/logo.svg" />
+        </a>
 
-      <ul class="list">
-        <li>
-          <a
-            href="google.com"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Google link"
-            title="Google"
-            >G</a
-          >
-        </li>
-        <li>
-          <a
-            href="instagram.com"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Instagram link"
-            title="Instagram"
-            >I</a
-          >
-        </li>
-        <li>
-          <a
-            href="linkedin.com"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Lonkedin link"
-            title="linkedin"
-            >In</a
-          >
-        </li>
-      </ul>
-
-      <nav>
-        <ul class="site-nav list">
-          <li><a href="#about" class="link current">About</a></li>
-          <li><a href="#services" class="link">Services</a></li>
-          <li><a href="#specialists" class="link">Specialists</a></li>
-          <li><a href="#forpatients" class="link">For patients</a></li>
-          <li><a href="" class="link">Contacts</a></li>
+        <ul class="list social-links">
+          <li>
+            <a
+              href="google.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Google link"
+              title="Google"
+              >G</a
+            >
+          </li>
+          <li>
+            <a
+              href="instagram.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Instagram link"
+              title="Instagram"
+              >I</a
+            >
+          </li>
+          <li>
+            <a
+              href="linkedin.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Lonkedin link"
+              title="linkedin"
+              >In</a
+            >
+          </li>
         </ul>
-      </nav>
 
-      <div class="contact-info">
-        <p class="address">
-          Kharkiv, <br />
-          Pushkinska 1A
-        </p>
-        <p class="time">from 09:00 - 20:00 <span>Mon-Sat</span></p>
-        <a href="tel:+79003331040" title="Clinic phone number" class="phone">+7900 333 10 40 </a>
+        <nav>
+          <ul class="site-nav list">
+            <li class="item"><a href="#about" class="link current">About</a></li>
+            <li class="item"><a href="#services" class="link">Services</a></li>
+            <li class="item"><a href="#specialists" class="link">Specialists</a></li>
+            <li class="item"><a href="#forpatients" class="link">For patients</a></li>
+            <li class="item"><a href="" class="link">Contacts</a></li>
+          </ul>
+        </nav>
+
+        <div class="contact-info">
+          <p class="address">
+            Kharkiv, <br />
+            Pushkinska 1A
+          </p>
+          <p class="time">from 09:00 - 20:00 <span>Mon-Sat</span></p>
+          <a href="tel:+79003331040" title="Clinic phone number" class="phone">+7900 333 10 40 </a>
+          <button type="button" class="button secondary">Request a call</button>
+        </div>
       </div>
-
-      <button type="button" class="button secondary">Request a call</button>
     </header>
 
     <!-- Main -->
@@ -80,309 +88,362 @@
       <!-- Hero -->
       <div>
         <section class="hero">
-          <p class="subtitle">Dentistry Kharkiv</p>
-          <h1 id="about" class="title">Same day dental treatment</h1>
-          <p class="text">
-            We will provide a full consultation, <br />
-            professional oral hygiene, <br />
-            treatment of teeth and gums
-          </p>
-          <button type="button" class="button primary">Make an appointment</button>
+          <div class="container">
+            <p class="subtitle">Dentistry Kharkiv</p>
+            <h1 id="about" class="title">Same day dental treatment</h1>
+            <p class="text">
+              We will provide a full consultation, <br />
+              professional oral hygiene, <br />
+              treatment of teeth and gums
+            </p>
+            <button type="button" class="button primary btn">Make an appointment</button>
 
-          <ul class="hero-list list">
-            <li>
-              <img src="./images/doc.svg" alt="Doctor" />
-              <p class="descr">Team of qualified specialists</p>
-            </li>
-            <li>
-              <img src="./images/chear.svg" alt="Chear icon" />
-              <p class="descr">3 dental offices</p>
-            </li>
-            <li>
-              <img src="./images/location.svg" alt="Location" />
-              <p class="descr">Convenient location</p>
-            </li>
-          </ul>
+            <ul class="hero-list list">
+              <li class="item">
+                <img src="./images/doc.svg" alt="Doctor" />
+                <p class="descr">Team of qualified specialists</p>
+              </li>
+              <li class="item">
+                <img src="./images/chear.svg" alt="Chear icon" />
+                <p class="descr">3 dental offices</p>
+              </li>
+              <li class="item">
+                <img src="./images/location.svg" alt="Location" />
+                <p class="descr">Convenient location</p>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
 
       <!-- Services -->
       <section class="section">
-        <h2 id="services" class="section-title">Services</h2>
-        <p class="section-descr">
-          We tried to make a price <br />
-          as simple and understandable as possible.
-        </p>
-        <ul class="list">
-          <li>
-            <img src="./images/treat.svg" alt="teeth treatment" />
-            <p class="services-text">Dental treatment</p>
-          </li>
-          <li>
-            <img src="./images/hygiene.svg" alt="Teeth hygiene" />
-            <p class="services-text">Hygiene</p>
-          </li>
-          <li>
-            <img src="./images/braces.svg" alt="Braces" />
-            <p class="services-text">Braces</p>
-          </li>
-          <li>
-            <img src="./images/child-dent.svg" alt="Children's dentistry" />
-            <p class="services-text">Children's dentistry</p>
-          </li>
-          <li>
-            <img src="./images/implants.svg" alt="Implants" />
-            <p class="services-text">Implants</p>
-          </li>
-          <li>
-            <img src="./images/veneers.svg" alt="Veneers" />
-            <p>Veneers</p>
-          </li>
-          <li>
-            <img src="./images/crowns.svg" alt="Crowns" />
-            <p class="services-text">Crowns</p>
-          </li>
-          <li>
-            <img src="./images/surgery.svg" alt="Surgery" />
-            <p class="services-text">Surgery</p>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 id="services" class="section-title">Services</h2>
+          <p class="section-descr">
+            We tried to make a price <br />
+            as simple and understandable as possible.
+          </p>
+          <ul class="services-list list">
+            <li class="item">
+              <img src="./images/treat.svg" alt="teeth treatment" />
+              <p class="services-text">Dental treatment</p>
+            </li>
+            <li class="item">
+              <img src="./images/hygiene.svg" alt="Teeth hygiene" />
+              <p class="services-text">Hygiene</p>
+            </li>
+            <li class="item">
+              <img src="./images/braces.svg" alt="Braces" />
+              <p class="services-text">Braces</p>
+            </li>
+            <li class="item">
+              <img src="./images/child-dent.svg" alt="Children's dentistry" />
+              <p class="services-text">Children's dentistry</p>
+            </li>
+            <li class="item">
+              <img src="./images/implants.svg" alt="Implants" />
+              <p class="services-text">Implants</p>
+            </li>
+            <li class="item">
+              <img src="./images/veneers.svg" alt="Veneers" />
+              <p class="services-text">Veneers</p>
+            </li>
+            <li class="item">
+              <img src="./images/crowns.svg" alt="Crowns" />
+              <p class="services-text">Crowns</p>
+            </li>
+            <li class="item">
+              <img src="./images/surgery.svg" alt="Surgery" />
+              <p class="services-text">Surgery</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Offers -->
       <section class="offers section">
-        <h2 class="section-title">Patients trust us</h2>
+        <div class="container">
+          <h2 class="section-title">Patients trust us</h2>
 
-        <ul class="offers-list list">
-          <li>
-            <p class="num">1</p>
-            <h3 class="subtitle">Honest prices, no tricky tricks</h3>
-            <p class="text">We fix prices in terms of treatment, We don’t raise in the process.</p>
-          </li>
-          <li>
-            <p class="num">2</p>
-            <h3 class="subtitle">Experienced Doctors</h3>
-            <p class="text">
-              Doctors are constantly improving in his specialty, despite for rich work experience.
-            </p>
-          </li>
-          <li>
-            <p class="num">3</p>
-            <h3 class="subtitle">Comfortable conditions</h3>
-            <p class="text">
-              The cozy atmosphere and helpful staff will make your visit to the dentist as pleasant
-              as possible.
-            </p>
-          </li>
-        </ul>
+          <ul class="offers-list list">
+            <li class="item">
+              <p class="num">1</p>
+              <h3 class="subtitle">Honest prices, no tricky tricks</h3>
+              <p class="text">
+                We fix prices in terms of treatment, We don’t raise in the process.
+              </p>
+            </li>
+            <li class="item">
+              <p class="num">2</p>
+              <h3 class="subtitle">Experienced Doctors</h3>
+              <p class="text">
+                Doctors are constantly improving in his specialty, despite for rich work experience.
+              </p>
+            </li>
+            <li class="item">
+              <p class="num">3</p>
+              <h3 class="subtitle">Comfortable conditions</h3>
+              <p class="text">
+                The cozy atmosphere and helpful staff will make your visit to the dentist as
+                pleasant as possible.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- braces -->
-      <section class="braces section">
-        <h2 id="forpatients" class="section-title">
-          When fixing braces on both jaws, receive a certificate for 7,000 hryvnia
-        </h2>
-        <p class="recall-descr">
-          Enter your phone number, we will call you back and select a convenient appointment time
-          for you. Or call us yourself -
-          <a href="tel:+79003331040" title="Clinic phone number" class="recall-link">+7 900 333 10 40</a>
-        </p>
+      <section class="braces section no-padding">
+        <div class="container wrapper">
+          <div class="description-wrap">
+            <h2 id="forpatients" class="section-title">
+              When fixing braces on both jaws, receive a certificate for 7,000 hryvnia
+            </h2>
+            <p class="recall-descr">
+              Enter your phone number, we will call you back and <br />
+              select a convenient appointment time for you. <br />
+              Or call us yourself -
+              <a href="tel:+79003331040" title="Clinic phone number" class="recall-link"
+                >+7 900 333 10 40</a
+              >
+            </p>
 
-        <form>
-          <input type="text" placeholder="number" />
-          <button type="submit" class="button primary">Make an appointment</button>
-        </form>
+            <form class="form">
+              <input type="text" placeholder="number" />
+              <button type="submit" class="button primary">Make an appointment</button>
+            </form>
 
-        <p class="agree-text">
-          By signing up for the service you consent to
-          <a href="" class="agree-link">the processing of your personal data</a>
-        </p>
+            <p class="agree-text">
+              By signing up for the service you consent to
+              <a href="" class="agree-link"
+                >the processing <br />
+                of your personal data</a
+              >
+            </p>
+          </div>
 
-        <img
-          src="./images/woman-dentist.png"
-          alt="Women dentist is holding dental tool"
-          width="752"
-        />
+          <img
+            src="./images/woman-dentist.png"
+            alt="Women dentist is holding dental tool"
+            width="752"
+          />
+        </div>
       </section>
 
       <!-- Treatment -->
       <section class="treatment section">
-        <h2 class="section-title">Treatment with us</h2>
-        <p class="section-descr">
-          Simple and painless, providing <br />
-          the full range of dental services
-        </p>
+        <div class="container">
+          <h2 class="section-title">Treatment with us</h2>
+          <p class="section-descr">
+            Simple and painless, providing <br />
+            the full range of dental services
+          </p>
 
-        <div>
-          <div>
+          <div class="wrapper">
             <div>
-              <img src="./images/logo.svg" alt="logo" width="26" />
-              <p class="logo-text">clinic</p>
+              <div class="logo-wrap">
+                <img src="./images/logo.svg" alt="logo" width="26" />
+                <p class="logo-text">clinic</p>
+              </div>
+              <p class="text services">
+                provides the full range <br />
+                dental services such as:
+              </p>
+
+              <ul class="list services">
+                <li class="services-item">
+                  <p class="text">Therapy</p>
+                </li>
+                <li class="services-item">
+                  <p class="text">Surgery</p>
+                </li>
+                <li class="services-item">
+                  <p class="text">Orthodontics</p>
+                </li>
+                <li class="services-item">
+                  <p class="text">Children's dentistry</p>
+                </li>
+                <li class="services-item">
+                  <p class="text">Orthopedics</p>
+                </li>
+              </ul>
+
+              <p class="text">
+                The priority is to restore the functionality of the dental system and prevention of
+                oral diseases.
+              </p>
             </div>
-            <p class="text">
-              provides the full range <br />
-              dental services such as:
-            </p>
 
-            <ul class="list">
-              <li>
-                <p class="text">Therapy</p>
-              </li>
-              <li>
-                <p class="text">Surgery</p>
-              </li>
-              <li>
-                <p class="text">Orthodontics</p>
-              </li>
-              <li>
-                <p class="text">Children's dentistry</p>
-              </li>
-              <li>
-                <p class="text">Orthopedics</p>
-              </li>
-            </ul>
-
-            <p class="text">
-              The priority is to restore the functionality of the dental system and prevention of
-              oral diseases.
-            </p>
+            <img src="./images/docwithpat.png" alt="Dentist with patient" />
           </div>
-
-          <img src="./images/docwithpat.png" alt="Dentist with patient" />
         </div>
       </section>
 
       <!-- Specialists -->
       <section class="section">
-        <h2 id="specialists" class="section-title">Specialists</h2>
-        <p class="section-descr">
-          Simple and painless, providing <br />
-          the full range of dental services
-        </p>
+        <div class="container">
+          <h2 id="specialists" class="section-title">Specialists</h2>
+          <p class="section-descr">
+            Simple and painless, providing <br />
+            the full range of dental services
+          </p>
 
-        <ul class="doc-list list">
-          <li>
-            <h3 class="title">Shats Daria Sergeevna</h3>
-            <p class="descr">Director, Chief Physician, Orthodontist</p>
-            <p class="descr">Work experience 11 years</p>
-            <img src="./images/wom-doc.png" alt="Shats Daria Sergeevna" width="300" />
-          </li>
-          <li>
-            <h3 class="title">Olenina Marina Nikolaevna</h3>
-            <p class="descr">Deputy Director, Dentist Therapist</p>
-            <p class="descr">Work experience over 25 years</p>
-            <img src="./images/wom-doc.png" alt="Olenina Marina Nikolaevna" width="300" />
-          </li>
-          <li>
-            <h3 class="title">Lyshchikov Pavel Anatolevich</h3>
-            <p class="descr">Orthopedic dentist, implant surgeon</p>
-            <p class="descr">Work experience 15 years</p>
-            <img src="./images/man-doc.png" alt="Lyshchikov Pavel Anatolevich" width="473" />
-          </li>
-          <li>
-            <h3 class="title">Zhirnov Dmitry Aleksandrovich</h3>
-            <p class="descr">Orthopedic dentist, implant surgeon</p>
-            <p class="descr">Work experience 10 years</p>
-            <img src="./images/man-doc.png" alt="Zhirnov Dmitry Aleksandrovich" width="473" />
-          </li>
-          <li>
-            <h3 class="title">Terushkina Elena Dmitrievna</h3>
-            <p class="descr">Children's dentist</p>
-            <p class="descr">Work experience 10 years</p>
-            <img src="./images/wom-doc.png" alt="Terushkina Elena Dmitrievna" width="300" />
-          </li>
-        </ul>
+          <ul class="doc-list list">
+            <li class="item">
+              <div>
+                <h3 class="title">Shats Daria Sergeevna</h3>
+                <p class="descr">Director, Chief Physician, Orthodontist</p>
+                <p class="descr">Work experience 11 years</p>
+              </div>
+
+              <img src="./images/wom-doc.png" alt="Shats Daria Sergeevna" width="300" />
+            </li>
+            <li class="item">
+              <div>
+                <h3 class="title">Olenina Marina Nikolaevna</h3>
+                <p class="descr">Deputy Director, Dentist Therapist</p>
+                <p class="descr">Work experience over 25 years</p>
+              </div>
+
+              <img src="./images/wom-doc.png" alt="Olenina Marina Nikolaevna" width="300" />
+            </li>
+            <li class="item">
+              <div>
+                <h3 class="title">Lyshchikov Pavel Anatolevich</h3>
+                <p class="descr">Orthopedic dentist, implant surgeon</p>
+                <p class="descr">Work experience 15 years</p>
+              </div>
+
+              <img src="./images/man-doc.png" alt="Lyshchikov Pavel Anatolevich" width="473" />
+            </li>
+            <li class="item">
+              <div>
+                <h3 class="title">Zhirnov Dmitry Aleksandrovich</h3>
+                <p class="descr">Orthopedic dentist, implant surgeon</p>
+                <p class="descr">Work experience 10 years</p>
+              </div>
+
+              <img src="./images/man-doc.png" alt="Zhirnov Dmitry Aleksandrovich" width="473" />
+            </li>
+            <li class="item">
+              <div>
+                <h3 class="title">Terushkina Elena Dmitrievna</h3>
+                <p class="descr">Children's dentist</p>
+                <p class="descr">Work experience 10 years</p>
+              </div>
+
+              <img src="./images/wom-doc.png" alt="Terushkina Elena Dmitrievna" width="300" />
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Certificates -->
       <section class="section">
-        <h2 class="section-title">Certificates, awards and diplomas</h2>
+        <div class="container">
+          <h2 class="section-title certif-title">Certificates, awards and diplomas</h2>
 
-        <div>
-          <img src="./images/certificate.png" alt="certificate 1" width="538" />
-          <img src="./images/certificate.png" alt="certificate 2" width="538" />
-          <img src="./images/certificate.png" alt="certificate 3" width="538" />
+          <div class="awards-wrap">
+            <img src="./images/certificate.png" alt="certificate 1" width="450" />
+            <img src="./images/certificate.png" alt="certificate 2" width="450" />
+            <img src="./images/certificate.png" alt="certificate 3" width="450" />
+          </div>
         </div>
       </section>
 
       <!-- Online consultation -->
-      <section class="consult section">
-        <h2 class="section-title">
-          Online consultation with a specialist via audio and video communication free of charge.
-        </h2>
-        <p class="recall-descr">
-          Enter your phone number, we will call you back and select a convenient appointment time
-          for you. Or call us yourself -
-          <a href="tel:+79003331040" title="Clinic phone number" class="recall-link"
-            >+7 900 333 10 40</a
-          >
-        </p>
+      <section class="consult section no-padding">
+        <div class="container wrapper">
+          <div class="description-wrap">
+            <h2 class="section-title">
+              Online consultation with a specialist via audio and video communication free of
+              charge.
+            </h2>
+            <p class="recall-descr">
+              Enter your phone number, we will call you back and <br />
+              select a convenient appointment time for you. <br />
+              Or call us yourself -
+              <a href="tel:+79003331040" title="Clinic phone number" class="recall-link"
+                >+7 900 333 10 40</a
+              >
+            </p>
 
-        <form>
-          <input type="text" placeholder="number" />
-          <button type="submit" class="button primary">Make an appointment</button>
-        </form>
+            <form class="form">
+              <input type="text" placeholder="number" />
+              <button type="submit" class="button primary">Make an appointment</button>
+            </form>
 
-        <p class="agree-text">
-          By signing up for the service you consent to
-          <a href="" title="Processing of personal data" class="agree-link"
-            >the processing of your personal data</a
-          >
-        </p>
+            <p class="agree-text">
+              By signing up for the service you consent to
+              <a href="" title="Processing of personal data" class="agree-link"
+                >the processing <br />
+                of your personal data</a
+              >
+            </p>
+          </div>
 
-        <img
-          src="./images/dentist.png"
-          alt="Women dentist is holding dental tool and making phone"
-          width="764"
-        />
+          <img
+            src="./images/dentist.png"
+            alt="Women dentist is holding dental tool and making phone"
+            width="764"
+          />
+        </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-      <ul class="list">
-        <li>
-          <a
-            href="google.com"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Google link"
-            title="Google"
-            >G</a
-          >
-        </li>
-        <li>
-          <a
-            href="instagram.com"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Instagram link"
-            title="Instagram"
-            >I</a
-          >
-        </li>
-        <li>
-          <a
-            href="linkedin.com"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Lonkedin link"
-            title="linkedin"
-            >In</a
-          >
-        </li>
-      </ul>
+      <div class="container footer-wrap">
+        <ul class="list social-media">
+          <li>
+            <a
+              href="google.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Google link"
+              title="Google"
+              >G</a
+            >
+          </li>
+          <li>
+            <a
+              href="instagram.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Instagram link"
+              title="Instagram"
+              >I</a
+            >
+          </li>
+          <li>
+            <a
+              href="linkedin.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Lonkedin link"
+              title="linkedin"
+              >In</a
+            >
+          </li>
+        </ul>
 
-      <div>
-        <p class="text">Dent LLC, license No. LO-86-8681-01868686047 dated February 13, 2023.</p>
-        <p class="text">&copy; 2018-2021</p>
+        <div class="info-wrap">
+          <div class="text-wrap">
+            <p class="text">
+              Dent LLC, license No. LO-86-8681-01868686047 dated February 13, 2023.
+            </p>
+            <p class="text">&copy; 2018-2021</p>
+          </div>
+
+          <a href="" title="Processing of personal data" class="text text-link"
+            >Policy regarding the processing <br />
+            of personal data</a
+          >
+
+          <img src="./images/logo.svg" />
+        </div>
       </div>
-
-      <a href="" title="Processing of personal data" class="text"
-        >Policy regarding the processing of personal data</a
-      >
-
-      <img src="./images/logo.svg" />
     </footer>
   </body>
 </html>

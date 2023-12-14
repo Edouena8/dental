@@ -32,6 +32,38 @@ body {
   font-size: 24px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1500px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid tomato;
+}
+
+.section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.section.no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
 }
