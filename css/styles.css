@@ -77,6 +77,21 @@
 
 /* Hero */
 
+.overlay {
+  height: 628px;
+  background-color: var(--dark-bg-color);
+  background-image: url('../images/hero/hero-img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-thumb {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .hero .subtitle {
   margin-bottom: 9px;
 
@@ -102,22 +117,47 @@
 }
 
 .hero .btn {
+  width: 295px;
   margin-bottom: 77px;
 }
 
 .hero-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  gap: 6px;
 }
 
 .hero-list > .item {
   display: flex;
-  gap: 20px;
   align-items: center;
   padding-top: 27px;
-  padding-right: 21px;
-  padding-bottom: 36px;
+  padding-right: 30px;
+  padding-bottom: 10px;
   padding-left: 30px;
+
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-list > .item::before {
+  content: '';
+  width: 44px;
+  height: 44px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-right: 20px;
+}
+
+.icon-doctor::before {
+  background-image: url('../images/doc.svg');
+}
+
+.icon-chear::before {
+  background-image: url('../images/chear.svg');
+}
+
+.icon-location::before {
+  background-image: url('../images/location.svg');
 }
 
 .hero-list .descr {
@@ -198,12 +238,56 @@
 
 .services-list > .item {
   width: 250px;
+  height: 237px;
   text-align: center;
-  padding: 34px 64px;
+  padding: 34px 55px;
+  border-radius: 6px;
+  background-color: var(--services-bg-color);
 }
 
-.services-list > .item:first-child{
+.services-list > .item:first-child {
   background-color: var(--accent-bg-color);
+}
+
+.services-list > .item::before {
+  display: block;
+  content: '';
+  height: 75px;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: contain; */
+}
+
+.icon-treat::before {
+  background-image: url('../images/treat.svg');
+}
+
+.icon-hygiene::before {
+  background-image: url('../images/hygiene.svg');
+}
+
+.icon-braces::before {
+  background-image: url('../images/braces.svg');
+}
+
+.icon-child-dent::before {
+  background-image: url('../images/child-dent.svg');
+}
+
+.icon-implants::before {
+  background-image: url('../images/implants.svg');
+}
+
+.icon-veneers::before {
+  background-image: url('../images/veneers.svg');
+}
+
+.icon-crowns::before {
+  background-image: url('../images/crowns.svg');
+}
+
+.icon-surgery::before {
+  background-image: url('../images/surgery.svg');
 }
 
 .services-text {
@@ -254,6 +338,21 @@
 .wrapper {
   display: flex;
 }
+
+.braces .wrapper,
+.consult .wrapper {
+  background-image: linear-gradient(rgba(230, 242, 255, 1), rgba(250, 241, 237, 1));
+}
+
+/* .braces .wrapper::after {
+  content: '';
+  width: 752px;
+  height: 753px;
+  background-image: url('../images/woman-dentist.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
 
 .description-wrap {
   display: flex;
@@ -323,14 +422,24 @@
   margin-bottom: 47px;
 }
 
-.services-item {
+.treatment-item {
   padding: 11px 22px;
   border-radius: 6px;
-  background-color: #f9f9f9;
+  background-color: var(--treatment-bg-color);
 }
 
 .treatment .description {
   margin-bottom: 62px;
+}
+
+.logo-list {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.logo-item:last-child {
+  margin-left: 52px;
 }
 
 /* Specialists */
