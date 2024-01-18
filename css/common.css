@@ -26,6 +26,12 @@
   --treatment-bg-color: #f9f9f9;
   --services-bg-color: rgba(251, 251, 251, 1);
 
+  --icon-color: #2e3a59;
+  --secondary-icon-color: #20a0cd;
+  --icon-location-color: #1a3444;
+  --icon-calendar-color: #2e3a59;
+  --icon-phone-color: #1a3444;
+  --icon-accent-color: #38bcea;
 }
 
 body {
@@ -34,6 +40,12 @@ body {
 
   font-family: Montserrat, sans-serif;
   font-size: 24px;
+
+  /* padding-top: 80px; */
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 h1,
@@ -67,7 +79,7 @@ p {
   padding-bottom: 90px;
 }
 
-.section.no-padding {
-  padding-top: 0;
-  padding-bottom: 0;
+.section.change-padding {
+  padding-top: 62px;
+  padding-bottom: 62px;
 }

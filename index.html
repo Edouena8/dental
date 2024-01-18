@@ -19,10 +19,13 @@
     />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./js/dataModal.js"></script>
+    <script type="module" src="./js/header-scroll.js"></script>
   </head>
-  <body>
+  <body data-page>
     <!-- Header -->
-    <header class="header">
+    <header class="header" data-header>
       <div class="container wrap">
         <a href="/" class="logo">
           <img src="./images/logo.svg" />
@@ -31,33 +34,45 @@
         <ul class="list social-links">
           <li>
             <a
+              class="link"
               href="google.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Google link"
               title="Google"
-              >G</a
             >
+              <svg class="social-icon" width="20" height="20">
+                <use href="./images/sprite.svg#icon-google"></use>
+              </svg>
+            </a>
           </li>
           <li>
             <a
+              class="link"
               href="instagram.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Instagram link"
               title="Instagram"
-              >I</a
             >
+              <svg class="social-icon" width="20" height="20">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
           </li>
           <li>
             <a
+              class="link"
               href="linkedin.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Lonkedin link"
               title="linkedin"
-              >In</a
             >
+              <svg class="social-icon" width="20" height="20">
+                <use href="./images/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
           </li>
         </ul>
 
@@ -72,12 +87,29 @@
         </nav>
 
         <div class="contact-info">
-          <p class="address">
-            Kharkiv, <br />
-            Pushkinska 1A
-          </p>
-          <p class="time">from 09:00 - 20:00 <span>Mon-Sat</span></p>
-          <a href="tel:+79003331040" title="Clinic phone number" class="phone">+7900 333 10 40 </a>
+          <div class="address-thumb">
+            <svg class="address-icon" width="16" height="20">
+              <use href="./images/sprite.svg#icon-location"></use>
+            </svg>
+            <p class="address">
+              Kharkiv, <br />
+              Pushkinska 1A
+            </p>
+          </div>
+
+          <div class="time-thumb">
+            <svg class="calendar-icon" width="18" height="20">
+              <use href="./images/sprite.svg#icon-calendar"></use>
+            </svg>
+            <p class="time">from 09:00 - 20:00 <span>Mon-Sat</span></p>
+          </div>
+
+          <a href="tel:+79003331040" title="Clinic phone number" class="phone">
+            <svg class="phone-icon" width="16" height="16">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+            +7900 333 10 40
+          </a>
           <button type="button" class="button secondary">Request a call</button>
         </div>
       </div>
@@ -89,7 +121,7 @@
       <div>
         <section class="hero">
           <div class="container overlay hero-thumb">
-            <p class="subtitle">Dentistry Kharkiv</p>
+            <p class="subtitle defis">Dentistry Kharkiv</p>
             <h1 id="about" class="title">
               Same day dental <br />
               treatment
@@ -99,16 +131,27 @@
               professional oral hygiene, <br />
               treatment of teeth and gums
             </p>
-            <button type="button" class="button primary btn">Make an appointment</button>
+            <button type="button" class="button primary btn" data-open-modal>
+              Make an appointment
+            </button>
 
             <ul class="hero-list list">
-              <li class="item icon-doctor">
+              <li class="item">
+                <svg class="hero-icon" width="27" height="38">
+                  <use href="./images/sprite.svg#icon-doc"></use>
+                </svg>
                 <p class="descr">Team of qualified specialists</p>
               </li>
-              <li class="item icon-chear">
+              <li class="item">
+                <svg class="hero-icon" width="29" height="39">
+                  <use href="./images/sprite.svg#icon-chear"></use>
+                </svg>
                 <p class="descr">3 dental offices</p>
               </li>
               <li class="item icon-location">
+                <svg class="hero-icon" width="25" height="41">
+                  <use href="./images/sprite.svg#icon-place"></use>
+                </svg>
                 <p class="descr">Convenient location</p>
               </li>
             </ul>
@@ -125,28 +168,99 @@
             as simple and understandable as possible.
           </p>
           <ul class="services-list list">
-            <li class="item icon-treat">
+            <li class="item icon-treat menu-item">
+              <div class="thumb">
+                <svg class="services-icon" width="58" height="60">
+                  <use href="./images/sprite.svg#icon-treat"></use>
+                </svg>
+              </div>
               <p class="services-text">Dental treatment</p>
+
+              <ul class="submenu list">
+                <li class="subitem">
+                  <p class="treatm">Light seal</p>
+                  <div class="wrap">
+                    <p class="price">3 800</p>
+                    <button class="signup-btn">Sign up</button>
+                  </div>
+                </li>
+                <li class="subitem">
+                  <p class="treatm">Treatment of caries</p>
+                  <div class="wrap">
+                    <p class="price">3 800</p>
+                    <button class="signup-btn">Sign up</button>
+                  </div>
+                </li>
+                <li class="subitem">
+                  <p class="treatm">Treatment of pulpitis</p>
+                  <div class="wrap">
+                    <p class="price">6 000</p>
+                    <button class="signup-btn">Sign up</button>
+                  </div>
+                </li>
+                <li class="subitem">
+                  <p class="treatm">Cyst treatment</p>
+                  <div class="wrap">
+                    <p class="price">4 450</p>
+                    <button class="signup-btn">Sign up</button>
+                  </div>
+                </li>
+              </ul>
             </li>
             <li class="item icon-hygiene">
+              <div class="thumb">
+                <svg class="services-icon" width="60" height="61">
+                  <use href="./images/sprite.svg#icon-hygiene"></use>
+                </svg>
+              </div>
               <p class="services-text">Hygiene</p>
             </li>
             <li class="item icon-braces">
+              <div class="thumb">
+                <svg class="services-icon" width="64" height="43">
+                  <use href="./images/sprite.svg#icon-braces"></use>
+                </svg>
+              </div>
               <p class="services-text">Braces</p>
             </li>
             <li class="item icon-child-dent">
+              <div class="thumb">
+                <svg class="services-icon" width="67" height="61">
+                  <use href="./images/sprite.svg#icon-child-dent"></use>
+                </svg>
+              </div>
               <p class="services-text">Children's dentistry</p>
             </li>
             <li class="item icon-implants">
+              <div class="thumb">
+                <svg class="services-icon" width="59" height="76">
+                  <use href="./images/sprite.svg#icon-implants"></use>
+                </svg>
+              </div>
               <p class="services-text">Implants</p>
             </li>
             <li class="item icon-veneers">
+              <div class="thumb">
+                <svg class="services-icon" width="79" height="46">
+                  <use href="./images/sprite.svg#icon-veneers"></use>
+                </svg>
+              </div>
               <p class="services-text">Veneers</p>
             </li>
             <li class="item icon-crowns">
+              <div class="thumb">
+                <svg class="services-icon" width="58" height="65">
+                  <use href="./images/sprite.svg#icon-crowns"></use>
+                </svg>
+              </div>
               <p class="services-text">Crowns</p>
             </li>
             <li class="item icon-surgery">
+              <div class="thumb">
+                <svg class="services-icon" width="77" height="79">
+                  <use href="./images/sprite.svg#icon-surgery"></use>
+                </svg>
+              </div>
               <p class="services-text">Surgery</p>
             </li>
           </ul>
@@ -186,16 +300,16 @@
       </section>
 
       <!-- braces -->
-      <section class="braces section no-padding">
-        <div class="container wrapper">
+      <section class="braces section change-padding woman-dentist">
+        <div class="container wrapper braces-thumb">
           <div class="description-wrap">
             <h2 id="forpatients" class="section-title">
-              When fixing braces on both jaws, receive a certificate for 7,000 hryvnia
+              When fixing braces on both jaws, receive a certificate for 7,000 &#8372;
             </h2>
             <p class="recall-descr">
               Enter your phone number, we will call you back and <br />
               select a convenient appointment time for you. <br />
-              Or call us yourself -
+              Or call us yourself
               <a href="tel:+79003331040" title="Clinic phone number" class="recall-link"
                 >+7 900 333 10 40</a
               >
@@ -215,11 +329,11 @@
             </p>
           </div>
 
-          <img
+          <!-- <img
             src="./images/woman-dentist.png"
             alt="Women dentist is holding dental tool"
             width="752"
-          />
+          /> -->
         </div>
       </section>
 
@@ -283,7 +397,21 @@
               </ul>
             </div>
 
-            <img src="./images/docwithpat.png" alt="Dentist with patient" />
+            <div class="slider-thumb">
+              <div class="slider-wrap">
+                <button class="slider-btn">
+                  <svg class="slider-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-left"></use>
+                  </svg>
+                </button>
+                <button class="slider-btn">
+                  <svg class="slider-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <img src="./images/docwithpat.png" alt="Dentist with patient" />
+            </div>
           </div>
         </div>
       </section>
@@ -299,49 +427,59 @@
 
           <ul class="doc-list list">
             <li class="item">
-              <div>
+              <div class="dentist-info">
                 <h3 class="title">Shats Daria Sergeevna</h3>
                 <p class="descr">Director, Chief Physician, Orthodontist</p>
                 <p class="descr">Work experience 11 years</p>
               </div>
 
-              <img src="./images/wom-doc.png" alt="Shats Daria Sergeevna" width="300" />
+              <div class="image-thumb">
+                <img src="./images/wom-doc.png" alt="Shats Daria Sergeevna" />
+              </div>
             </li>
             <li class="item">
-              <div>
+              <div class="dentist-info">
                 <h3 class="title">Olenina Marina Nikolaevna</h3>
                 <p class="descr">Deputy Director, Dentist Therapist</p>
                 <p class="descr">Work experience over 25 years</p>
               </div>
 
-              <img src="./images/wom-doc.png" alt="Olenina Marina Nikolaevna" width="300" />
+              <div class="image-thumb">
+                <img src="./images/wom-doc.png" alt="Olenina Marina Nikolaevna" />
+              </div>
             </li>
             <li class="item">
-              <div>
+              <div class="dentist-info">
                 <h3 class="title">Lyshchikov Pavel Anatolevich</h3>
                 <p class="descr">Orthopedic dentist, implant surgeon</p>
                 <p class="descr">Work experience 15 years</p>
               </div>
 
-              <img src="./images/man-doc.png" alt="Lyshchikov Pavel Anatolevich" width="473" />
+              <div class="image-thumb">
+                <img src="./images/man-doc.png" alt="Lyshchikov Pavel Anatolevich" />
+              </div>
             </li>
             <li class="item">
-              <div>
+              <div class="dentist-info">
                 <h3 class="title">Zhirnov Dmitry Aleksandrovich</h3>
                 <p class="descr">Orthopedic dentist, implant surgeon</p>
                 <p class="descr">Work experience 10 years</p>
               </div>
 
-              <img src="./images/man-doc.png" alt="Zhirnov Dmitry Aleksandrovich" width="473" />
+              <div class="image-thumb">
+                <img src="./images/man-doc.png" alt="Zhirnov Dmitry Aleksandrovich" />
+              </div>
             </li>
             <li class="item">
-              <div>
+              <div class="dentist-info">
                 <h3 class="title">Terushkina Elena Dmitrievna</h3>
                 <p class="descr">Children's dentist</p>
                 <p class="descr">Work experience 10 years</p>
               </div>
 
-              <img src="./images/wom-doc.png" alt="Terushkina Elena Dmitrievna" width="300" />
+              <div class="image-thumb">
+                <img src="./images/wom-doc.png" alt="Terushkina Elena Dmitrievna" />
+              </div>
             </li>
           </ul>
         </div>
@@ -361,17 +499,16 @@
       </section>
 
       <!-- Online consultation -->
-      <section class="consult section no-padding">
+      <section class="consult section change-padding wom-doc">
         <div class="container wrapper">
           <div class="description-wrap">
             <h2 class="section-title">
-              Online consultation with a specialist via audio and video communication free of
-              charge.
+              Free online consultation with an audio and video specialist
             </h2>
             <p class="recall-descr">
               Enter your phone number, we will call you back and <br />
               select a convenient appointment time for you. <br />
-              Or call us yourself -
+              Or call us yourself
               <a href="tel:+79003331040" title="Clinic phone number" class="recall-link"
                 >+7 900 333 10 40</a
               >
@@ -391,11 +528,11 @@
             </p>
           </div>
 
-          <img
+          <!-- <img
             src="./images/dentist.png"
             alt="Women dentist is holding dental tool and making phone"
             width="764"
-          />
+          /> -->
         </div>
       </section>
     </main>
@@ -403,36 +540,48 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer-wrap">
-        <ul class="list social-media">
+        <ul class="list social-links">
           <li>
             <a
+              class="link"
               href="google.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Google link"
               title="Google"
-              >G</a
             >
+              <svg class="social-icon" width="33" height="34">
+                <use href="./images/sprite.svg#icon-google"></use>
+              </svg>
+            </a>
           </li>
           <li>
             <a
+              class="link"
               href="instagram.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Instagram link"
               title="Instagram"
-              >I</a
             >
+              <svg class="social-icon" width="34" height="34">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
           </li>
           <li>
             <a
+              class="link"
               href="linkedin.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Lonkedin link"
               title="linkedin"
-              >In</a
             >
+              <svg class="social-icon" width="34" height="34">
+                <use href="./images/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
           </li>
         </ul>
 
@@ -453,5 +602,15 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <button class="modal-btn" data-close-modal>
+          <svg class="modal-btn-icon" width="20" height="20">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </body>
 </html>

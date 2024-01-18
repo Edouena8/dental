@@ -5,6 +5,19 @@
   align-items: center;
 }
 
+.header.no-transparency {
+  background-color: rgba(250, 241, 237, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
 .header .logo {
   margin-right: 30px;
 }
@@ -15,18 +28,31 @@
   margin-right: 30px;
 }
 
+.social-links .link {
+  display: block;
+}
+
+.social-icon {
+  fill: var(--icon-color);
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  fill: var(--accent-text-color);
+}
+
 .site-nav {
   display: flex;
 }
 
 .site-nav > .item + .item {
-  margin-left: 35px;
+  margin-left: 20px;
 }
 
 .site-nav .link {
   display: block;
-  padding-top: 47px;
-  padding-bottom: 43px;
+  padding-top: 31px;
+  padding-bottom: 31px;
   color: rgba(170, 170, 170, 1);
 
   font-family: Roboto;
@@ -50,22 +76,37 @@
   align-items: center;
 }
 
-.contact-info .address {
-  margin-right: 40px;
+.contact-info .address-thumb,
+.contact-info .time-thumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 30px;
+}
 
+.address-icon {
+  fill: var(----icon-location-color);
+}
+
+.calendar-icon {
+  fill: var(calendar-icon);
+}
+
+.contact-info .address {
   color: var(--address-color);
   font-size: 15px;
   line-height: 1.15;
 }
 
 .contact-info .time {
-  margin-right: 40px;
-
   font-size: 15px;
   line-height: 1.2;
 }
 
 .contact-info .phone {
+  display: flex;
+  gap: 8px;
+  align-items: center;
   margin-right: 25px;
 
   color: var(--phone-link-color);
@@ -73,6 +114,15 @@
   font-size: 18px;
   line-height: 1.2;
   text-decoration: none;
+}
+
+.contact-info .phone:hover,
+.contact-info .phone:focus {
+  color: var(--accent-text-color);
+}
+
+.phone-icon {
+  fill: currentColor;
 }
 
 /* Hero */
@@ -93,11 +143,22 @@
 }
 
 .hero .subtitle {
+  display: flex;
+  gap: 6px;
+  align-items: center;
   margin-bottom: 9px;
 
   color: var(--content-color);
   font-size: 20px;
   line-height: 1.15;
+}
+
+.hero .subtitle::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: #4e4e4e;
 }
 
 .hero .title {
@@ -138,26 +199,9 @@
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.hero-list > .item::before {
-  content: '';
-  width: 44px;
-  height: 44px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
+.hero-icon {
+  fill: var(--secondary-icon-color);
   margin-right: 20px;
-}
-
-.icon-doctor::before {
-  background-image: url('../images/doc.svg');
-}
-
-.icon-chear::before {
-  background-image: url('../images/chear.svg');
-}
-
-.icon-location::before {
-  background-image: url('../images/location.svg');
 }
 
 .hero-list .descr {
@@ -218,11 +262,23 @@
   border-color: transparent;
 }
 
+.button.primary:hover,
+.button.primary :focus {
+  background-color: var(--accent-text-color);
+}
+
 .button.secondary {
   border-color: var(--accent-bg-color);
 
   color: var(--accent-text-color);
   background-color: var(--primary-white-color);
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-text-color);
+  border-color: transparent;
 }
 
 /* services */
@@ -237,57 +293,32 @@
 }
 
 .services-list > .item {
+  position: relative;
   width: 250px;
   height: 237px;
   text-align: center;
   padding: 34px 55px;
   border-radius: 6px;
   background-color: var(--services-bg-color);
+
+  cursor: pointer;
 }
 
-.services-list > .item:first-child {
+.services-list > .item:hover {
   background-color: var(--accent-bg-color);
 }
 
-.services-list > .item::before {
-  display: block;
-  content: '';
-  height: 75px;
-  background-repeat: no-repeat;
-  background-position: center;
-  /* background-size: contain; */
+.services-list .thumb {
+  height: 80px;
+  margin-bottom: 20px;
 }
 
-.icon-treat::before {
-  background-image: url('../images/treat.svg');
+.services-list .services-icon {
+  fill: var(--icon-accent-color);
 }
 
-.icon-hygiene::before {
-  background-image: url('../images/hygiene.svg');
-}
-
-.icon-braces::before {
-  background-image: url('../images/braces.svg');
-}
-
-.icon-child-dent::before {
-  background-image: url('../images/child-dent.svg');
-}
-
-.icon-implants::before {
-  background-image: url('../images/implants.svg');
-}
-
-.icon-veneers::before {
-  background-image: url('../images/veneers.svg');
-}
-
-.icon-crowns::before {
-  background-image: url('../images/crowns.svg');
-}
-
-.icon-surgery::before {
-  background-image: url('../images/surgery.svg');
+.services-list > .item:hover .services-icon {
+  fill: var(--primary-white-color);
 }
 
 .services-text {
@@ -296,6 +327,73 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+}
+
+.services-list > .item:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 1000px;
+  background-color: #fbfbfb;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1);
+
+  z-index: 10;
+  display: none;
+}
+
+.subitem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 6px;
+
+  padding: 20px 30px;
+}
+
+.subitem:hover{
+  box-shadow: inset 0 0 35px 5px rgba(56, 188, 234, 0.35), inset 0 2px 1px 1px rgba(255,255,255,0.9), inset 0 -2px 1px rgba(56, 188, 234, 0.5);
+}
+
+.subitem .wrap {
+  margin-left: auto;
+}
+
+.signup-btn {
+  min-width: 186px;
+  border-radius: 6px;
+  padding: 11px 34px;
+  margin-left: 60px;
+  border: 2px solid transparent;
+
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-bg-color);
+  border: none;
+
+  cursor: pointer;
+}
+
+.signup-btn:hover,
+.signup-btn:focus {
+  background-color: var(--accent-text-color);
+}
+
+.subitem .treatm,
+.subitem .price{
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.2;
+
+  color: var(--secondary-title-color);
 }
 
 /* offers */
@@ -333,16 +431,45 @@
   line-height: 1.15;
 }
 
-/* Braces */
+/* Braces & consultation*/
+
+.braces,
+.consult {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-image: linear-gradient(to right, rgba(230, 242, 255, 1), rgba(250, 241, 237, 1)); */
+  background-repeat: no-repeat;
+  background-position: top 0 left calc(50% + 410px), 0 0;
+  background-size: contain;
+}
+
+.woman-dentist {
+  background-image: url(../images/woman-dentist.png),
+    linear-gradient(to right, rgba(230, 242, 255, 1), rgba(250, 241, 237, 1));
+}
+
+.wom-doc {
+  background-image: url(../images/dentist.png),
+    linear-gradient(to right, rgba(230, 242, 255, 1), rgba(250, 241, 237, 1));
+}
+
+/* .braces-thumb{
+  background-image: url(../images/woman-dentist.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
 
 .wrapper {
   display: flex;
 }
-
+/* 
 .braces .wrapper,
 .consult .wrapper {
+  padding-top: 62px;
+  padding-bottom: 62px;
   background-image: linear-gradient(rgba(230, 242, 255, 1), rgba(250, 241, 237, 1));
-}
+} */
 
 /* .braces .wrapper::after {
   content: '';
@@ -355,6 +482,7 @@
 } */
 
 .description-wrap {
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -369,12 +497,23 @@
 }
 
 .recall-link {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
   color: var(--secondary-accent-text-color);
 
   font-family: Roboto;
   font-size: 24px;
   line-height: 1.3;
   text-decoration: none;
+}
+
+.recall-link::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: #262626;
 }
 
 .form {
@@ -390,6 +529,13 @@
 }
 
 /* treatment */
+.treatment,
+.offers {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fbfbfb;
+}
 
 .logo-text {
   color: var(--primary-content-color);
@@ -442,6 +588,35 @@
   margin-left: 52px;
 }
 
+.slider-thumb{
+  position: relative;
+}
+
+.slider-wrap{
+  position: absolute;
+  top: -55px;
+  right: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.slider-btn{
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #2E3A59;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.slider-icon{
+  fill: #2E3A59;
+}
+
 /* Specialists */
 
 .doc-list {
@@ -452,8 +627,28 @@
 }
 
 .doc-list > .item {
-  width: calc((100% - 15px) / 2);
+  /* width: calc((100% - 15px) / 2); */
   display: flex;
+  border-radius: 6px;
+  background-image: linear-gradient(to right, #f7faf7, #eff0f4);
+}
+
+.dentist-info {
+  max-width: 400px;
+  padding: 40px;
+}
+
+.image-thumb {
+  width: 300px;
+  height: 415px;
+}
+
+.image-thumb > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 }
 
 .doc-list .title {
@@ -488,9 +683,10 @@
   display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #f2f3f5;
 }
 
-.social-media {
+.footer .social-links {
   display: flex;
   gap: 34px;
 }
@@ -514,4 +710,53 @@
 
   font-size: 15px;
   line-height: 1.45;
+}
+
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 400px;
+  width: 600px;
+
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-title-color);
+  background-color: transparent;
+
+  cursor: pointer;
 }
