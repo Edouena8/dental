@@ -32,6 +32,7 @@
   --icon-calendar-color: #2e3a59;
   --icon-phone-color: #1a3444;
   --icon-accent-color: #38bcea;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
