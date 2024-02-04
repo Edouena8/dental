@@ -26,6 +26,8 @@
   --treatment-bg-color: #f9f9f9;
   --services-bg-color: rgba(251, 251, 251, 1);
 
+  --border-color: rgba(115, 115, 115, 1);
+
   --icon-color: #2e3a59;
   --secondary-icon-color: #20a0cd;
   --icon-location-color: #1a3444;
@@ -100,8 +102,23 @@ p {
   cursor: pointer;
 
   opacity: 0.5;
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .slider-icon{
   fill: #2E3A59;
+}
+
+.visually-hidden{
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }

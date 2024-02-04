@@ -22,6 +22,8 @@
     <script type="module" src="./index.js"></script>
     <script type="module" src="./js/dataModal.js"></script>
     <script type="module" src="./js/header-scroll.js"></script>
+    <script type="module" src="./js/speakerForm.js"></script>
+    <script type="module" src="./js/placeholder.js"></script>
   </head>
   <body data-page>
     <!-- Header -->
@@ -78,10 +80,10 @@
 
         <nav>
           <ul class="site-nav list">
-            <li class="item"><a href="#about" class="link current">About</a></li>
+            <li class="item"><a href="./index.html" class="link current">About</a></li>
             <li class="item"><a href="#services" class="link">Services</a></li>
             <li class="item"><a href="#specialists" class="link">Specialists</a></li>
-            <li class="item"><a href="#forpatients" class="link">For patients</a></li>
+            <li class="item"><a href="./forPatients.html" class="link">For patients</a></li>
             <li class="item"><a href="" class="link">Contacts</a></li>
           </ul>
         </nav>
@@ -626,6 +628,91 @@
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
+
+        <!-- <form class="form">
+          <label class="form-field" for="name">
+            <input
+              class="form-input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder=" "
+              data-placeholder="Ernesto Bombello"
+            />
+            <span class="form-label">Name</span>
+          </label>
+
+          <label class="form-field" for="name">
+           <input
+              class="form-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder=" "
+              data-placeholder="ernesto@mail.com"
+            />
+            <span class="form-label">Email</span>
+          </label>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form> -->
+
+        <form class="register-form">
+          <strong class="register-form-title">Leave your details and we will call you back</strong>
+          <div class="register-form-group" role="group">
+            <label class="register-form-field">
+              <input class="register-form-input" type="text" name="name" required />
+              <span class="register-form-label">Name*</span>
+              <svg class="register-form-icon" width="20" height="20">
+                <use href="./images/sprite.svg#icon-user" ></use>
+              </svg>
+            </label>
+
+            <label class="register-form-field">
+              <input class="register-form-input" type="tel" name="phone" required />
+              <span class="register-form-label">Phone*</span>
+              <svg class="register-form-icon" width="20" height="20">
+                <use href="./images/sprite.svg#icon-mobile" ></use>
+              </svg>
+            </label>
+
+            <label class="register-form-field">
+              <input class="register-form-input" type="email" name="email" required />
+              <span class="register-form-label">Email*</span>
+              <svg class="register-form-icon" width="20" height="20">
+                <use href="./images/sprite.svg#icon-mail" ></use>
+              </svg>
+            </label>
+
+            <label class="register-form-field">
+              <textarea class="register-form-textarea" name="comment" cols="30" rows="10"></textarea>
+              <span class="register-form-label">Comment</span>
+            </label>
+          </div>
+
+          <label class="register-form-agreement">
+            <input class="register-form-checkbox visually-hidden" type="checkbox" name="agreement" />
+            <svg class="register-icon" width="20" height="20">
+              <use class="icon-unchecked" href="./images/sprite.svg#icon-unchecked"></use>
+              <use class="icon-checked" href="./images/sprite.svg#icon-checked"></use>
+            </svg>
+            <span class="register-form-agreement-text"
+              >I agree to the newsletter and accept
+              <a class="register-form-agreement-link" href="">The terms of the agreement</a></span
+            >
+          </label>
+
+          <button class="register-form-submit-btn" type="submit">
+            <svg class="icon-btn" width="20" height="20">
+              <use href="./images/sprite.svg#icon-compass"></use>
+            </svg>
+            <svg class="icon-pencil" width="20" height="20">
+              <use href="./images/sprite.svg#icon-pencil"></use>
+            </svg>
+            Send
+          </button>
+          <button class="register-form-reset-btn" type="reset">Reset</button>
+        </form>
       </div>
     </div>
   </body>

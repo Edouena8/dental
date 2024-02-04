@@ -34,6 +34,8 @@
 
 .social-icon {
   fill: var(--icon-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .social-icon:hover,
@@ -61,7 +63,7 @@
   text-decoration: none;
 }
 
-.site-nav .link::after{
+.site-nav .link::after {
   content: '';
 
   display: block;
@@ -72,11 +74,11 @@
   background-color: var(--accent-text-color);
 
   transform: scaleX(0);
-  transition: transform 250ms var(--timing-function);
-  
+  transition: transform 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
-.site-nav .link:hover::after{
+.site-nav .link:hover::after,
+.site-nav .link:focus::after {
   transform: scaleX(1);
 }
 
@@ -88,8 +90,6 @@
 .site-nav .link.current {
   color: var(--accent-text-color);
 }
-
-
 
 .contact-info {
   display: flex;
@@ -135,6 +135,8 @@
   font-size: 18px;
   line-height: 1.2;
   text-decoration: none;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .contact-info .phone:hover,
@@ -231,7 +233,7 @@
   fill: var(--primary-white-color);
 }
 
-.hero .btn:hover .icon-pencil  {
+.hero .btn:hover .icon-pencil {
   transform: translateY(-50%);
 }
 
@@ -268,8 +270,8 @@
 
   /* transform: translateY(calc(-50% + 35px)); */
 
-  /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */ 
+/* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
 
 .hero-list {
   display: flex;
@@ -364,7 +366,8 @@
   color: var(--accent-text-color);
   background-color: var(--primary-white-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 
 .button.secondary:hover,
@@ -395,6 +398,8 @@
   background-color: var(--services-bg-color);
 
   cursor: pointer;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .services-list > .item:hover {
@@ -408,6 +413,8 @@
 
 .services-list .services-icon {
   fill: var(--icon-accent-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .services-list > .item:hover .services-icon {
@@ -423,7 +430,9 @@
 }
 
 .services-list > .item:hover .submenu {
-  display: block;
+  /* display: block; */
+  opacity: 1;
+  pointer-events: all;
 }
 
 .submenu {
@@ -437,7 +446,9 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
 
   z-index: 10;
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .subitem {
@@ -447,6 +458,8 @@
   border-radius: 6px;
 
   padding: 20px 30px;
+
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .subitem:hover {
@@ -474,6 +487,8 @@
   border: none;
 
   cursor: pointer;
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .signup-btn:hover,
@@ -836,8 +851,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  height: 400px;
+  min-height: 400px;
   width: 600px;
+  padding: 50px 30px;
 
   background-color: #fff;
   border-radius: 20px;
@@ -860,3 +876,217 @@
 
   cursor: pointer;
 }
+
+/* form */
+
+.register-form-title {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.register-form {
+  text-align: center;
+}
+
+.register-form-group {
+  margin-bottom: 25px;
+}
+
+.register-form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.register-form-field:last-child {
+  margin-bottom: 0;
+}
+
+.register-form-input,
+.register-form-textarea {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 50px;
+  width: 100%;
+
+  outline: transparent;
+}
+
+.register-form-textarea {
+  height: 90px;
+  padding: 10px;
+  resize: none;
+}
+
+.register-form-icon {
+  position: absolute;
+  top: 45%;
+  left: 15px;
+
+  transform: translateY(-100%);
+}
+
+.register-form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.register-form-checkbox:checked + .register-icon .icon-checked {
+  opacity: 1;
+}
+
+.register-form-checkbox:checked + .register-icon .icon-unchecked {
+  opacity: 0;
+  transition: opacity 250ms var(--timing-function);
+}
+
+.register-form-agreement-text {
+  margin-left: 8px;
+  font-size: 14px;
+  text-underline-position: under;
+  user-select: none;
+}
+
+.icon-checked {
+  opacity: 0;
+  fill: var(--additional-accent-text-color);
+  transition: opacity 250ms var(--timing-function);
+}
+
+.register-form-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+/* .form {
+  width: 600px;
+  outline: 1px solid tomato;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form-field label {
+  margin-bottom: 5px;
+}
+
+.form-field input {
+  margin: 0;
+  padding: 6px 10px;
+}
+
+.group-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.group-options,
+.group-experience {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form .date {
+  border-width: 2px;
+  border-radius: 4px;
+  padding: 20px 40px;
+}
+
+.comment {
+  padding: 8px;
+} */
+
+/* .checkbox-field{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.checkbox {
+  appearance: none;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+
+  transition: transform 250ms var(--timing-function);
+}
+
+.checkbox:checked + .checkbox-icon{
+  transform: scale(1.2);
+  background-color: green;
+}
+
+.checkbox-label{
+  transition: transform 250ms var(--timing-function);
+}
+
+.checkbox:checked ~ .checkbox-label{
+  transform: translateX(20px);
+}
+
+
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-50px);
+  color: red;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+
+  transition: transform 250ms var(--timing-function);
+} */
+
+/* .form-group{
+  position: relative;
+}
+
+.form-label{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-warning,
+.form-error{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.form-warning{
+  background-color: green;
+}
+
+.form-error{
+  background-color: red;
+} */
