@@ -657,41 +657,115 @@
           <button type="reset">Reset</button>
         </form> -->
 
-        <form class="register-form">
+        <form class="register-form js-speaker-form" autocomplete="off">
           <strong class="register-form-title">Leave your details and we will call you back</strong>
           <div class="register-form-group" role="group">
             <label class="register-form-field">
-              <input class="register-form-input" type="text" name="name" required />
+              <input
+                class="register-form-input"
+                type="text"
+                name="name"
+                placeholder=" "
+                data-placeholder="Cat Black"
+                minlength="3"
+                required
+              />
               <span class="register-form-label">Name*</span>
               <svg class="register-form-icon" width="20" height="20">
-                <use href="./images/sprite.svg#icon-user" ></use>
+                <use href="./images/sprite.svg#icon-user"></use>
+              </svg>
+              <svg class="register-form-valid-icon" width="20" height="20">
+                <use
+                  class="register-form-success"
+                  href="./images/sprite.svg#icon-checkmark"
+                  width="20"
+                  height="20"
+                ></use>
+                <use
+                  class="register-form-error"
+                  href="./images/sprite.svg#icon-cross"
+                  width="20"
+                  height="20"
+                ></use>
               </svg>
             </label>
 
             <label class="register-form-field">
-              <input class="register-form-input" type="tel" name="phone" required />
+              <input
+                class="register-form-input"
+                type="tel"
+                name="phone"
+                placeholder=" "
+                minlength="10"
+                maxlength="13"
+                required
+              />
               <span class="register-form-label">Phone*</span>
               <svg class="register-form-icon" width="20" height="20">
-                <use href="./images/sprite.svg#icon-mobile" ></use>
+                <use href="./images/sprite.svg#icon-mobile"></use>
+              </svg>
+              <svg class="register-form-valid-icon" width="20" height="20">
+                <use
+                  class="register-form-success"
+                  href="./images/sprite.svg#icon-checkmark"
+                  width="20"
+                  height="20"
+                ></use>
+                <use
+                  class="register-form-error"
+                  href="./images/sprite.svg#icon-cross"
+                  width="20"
+                  height="20"
+                ></use>
               </svg>
             </label>
 
             <label class="register-form-field">
-              <input class="register-form-input" type="email" name="email" required />
+              <input
+                class="register-form-input"
+                type="email"
+                name="email"
+                placeholder=" "
+                required
+              />
               <span class="register-form-label">Email*</span>
               <svg class="register-form-icon" width="20" height="20">
-                <use href="./images/sprite.svg#icon-mail" ></use>
+                <use href="./images/sprite.svg#icon-mail"></use>
+              </svg>
+              <svg class="register-form-valid-icon" width="20" height="20">
+                <use
+                  class="register-form-success"
+                  href="./images/sprite.svg#icon-checkmark"
+                  width="20"
+                  height="20"
+                ></use>
+                <use
+                  class="register-form-error"
+                  href="./images/sprite.svg#icon-cross"
+                  width="20"
+                  height="20"
+                ></use>
               </svg>
             </label>
 
             <label class="register-form-field">
-              <textarea class="register-form-textarea" name="comment" cols="30" rows="10"></textarea>
+              <textarea
+                class="register-form-textarea"
+                name="comment"
+                cols="30"
+                rows="10"
+                placeholder=" "
+              ></textarea>
               <span class="register-form-label">Comment</span>
             </label>
           </div>
 
           <label class="register-form-agreement">
-            <input class="register-form-checkbox visually-hidden" type="checkbox" name="agreement" />
+            <input
+              class="register-form-checkbox visually-hidden"
+              type="checkbox"
+              name="agreement"
+            />
             <svg class="register-icon" width="20" height="20">
               <use class="icon-unchecked" href="./images/sprite.svg#icon-unchecked"></use>
               <use class="icon-checked" href="./images/sprite.svg#icon-checked"></use>
@@ -702,16 +776,13 @@
             >
           </label>
 
-          <button class="register-form-submit-btn" type="submit">
-            <svg class="icon-btn" width="20" height="20">
-              <use href="./images/sprite.svg#icon-compass"></use>
-            </svg>
-            <svg class="icon-pencil" width="20" height="20">
-              <use href="./images/sprite.svg#icon-pencil"></use>
-            </svg>
+          <button class="button primary btn" type="submit">
             Send
           </button>
-          <button class="register-form-reset-btn" type="reset">Reset</button>
+          <button class="button secondary" type="submit">
+            Reset
+          </button>
+  
         </form>
       </div>
     </div>
