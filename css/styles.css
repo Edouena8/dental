@@ -626,8 +626,60 @@
   background-color: #262626;
 }
 
-.form {
+.contact-form {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   margin-bottom: 33px;
+}
+
+.contact-form-field {
+  position: relative;
+}
+
+.contact-form-input {
+  width: 230px;
+  padding: 10px 15px;
+  padding-right: 50px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  outline: transparent;
+
+  font-size: 20px;
+
+  transition: box-shadow 250ms var(--timing-function);
+}
+
+.contact-form-input:hover,
+.contact-form-input:focus {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.contact-form-label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+
+  color: #bbbb;
+
+  transform: translateY(-50%);
+  transition: transform 250ms var(--timing-function);
+}
+
+.contact-form-input:focus + .contact-form-label,
+.contact-form-input:not(:placeholder-shown) + .contact-form-label {
+  transform: translate(-15px, -55px) scale(0.8);
+}
+
+.contact-form-input:valid:not(:placeholder-shown) ~ .contact-form-valid-icon .contact-form-success {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.contact-form-input:invalid:not(:placeholder-shown) ~ .contact-form-valid-icon .contact-form-error {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .agree-text,
@@ -636,6 +688,8 @@
 
   font-size: 18px;
   line-height: 1.3;
+  text-underline-position: under;
+  user-select: none;
 }
 
 /* treatment */
@@ -987,41 +1041,23 @@
   transition: opacity 250ms var(--timing-function);
 }
 
-.register-form-agreement-text {
+.register-form-agreement-text{
   margin-left: 8px;
   font-size: 14px;
   text-underline-position: under;
   user-select: none;
+
+  color: var(--secondary-content-color);
+}
+
+.register-form-agreement-link {
+  color: var(--secondary-content-color);
 }
 
 .icon-checked {
   opacity: 0;
   fill: var(--additional-accent-text-color);
   transition: opacity 250ms var(--timing-function);
-}
-
-.register-form-valid-icon {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-
-  transform: translateY(-50%);
-}
-
-.register-form-success,
-.register-form-error {
-  opacity: 0;
-  transform: scale(0.4);
-  transform-origin: center;
-  transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function);
-}
-
-.register-form-error {
-  fill: red;
-}
-
-.register-form-success {
-  fill: green;
 }
 
 /* validation */

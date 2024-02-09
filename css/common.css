@@ -123,3 +123,34 @@ p {
   clip-path: inset(50%);
   margin: -1px;
 }
+
+/* Icons for validation */
+
+.register-form-valid-icon,
+.contact-form-valid-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+
+  transform: translateY(-50%);
+}
+
+.register-form-success,
+.register-form-error,
+.contact-form-success,
+.contact-form-error {
+  opacity: 0;
+  transform: scale(0.4);
+  transform-origin: center;
+  transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function);
+}
+
+.register-form-error,
+.contact-form-error {
+  fill: red;
+}
+
+.register-form-success,
+.contact-form-success {
+  fill: green;
+}

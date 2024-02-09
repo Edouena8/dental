@@ -323,8 +323,33 @@
               >
             </p>
 
-            <form class="form">
-              <input type="text" placeholder="number" />
+            <form class="contact-form">
+              <div class="contact-form-field">
+                <input
+                  class="contact-form-input"
+                  type="tel"
+                  minlength="10"
+                  maxlength="13"
+                  placeholder=" "
+                  name="contactNumb"
+                />
+                <span class="contact-form-label">Number</span>
+                <svg class="contact-form-valid-icon" width="20" height="20">
+                  <use
+                    class="contact-form-success"
+                    href="./images/sprite.svg#icon-checkmark"
+                    width="20"
+                    height="20"
+                  ></use>
+                  <use
+                    class="contact-form-error"
+                    href="./images/sprite.svg#icon-cross"
+                    width="20"
+                    height="20"
+                  ></use>
+                </svg>
+              </div>
+
               <button type="submit" class="button primary">Make an appointment</button>
             </form>
 
@@ -532,8 +557,33 @@
               >
             </p>
 
-            <form class="form">
-              <input type="text" placeholder="number" />
+            <form class="contact-form">
+              <div class="contact-form-field">
+                <input
+                  class="contact-form-input"
+                  type="tel"
+                  minlength="10"
+                  maxlength="13"
+                  placeholder=" "
+                  name="contactNumb"
+                />
+                <span class="contact-form-label">Number</span>
+                <svg class="contact-form-valid-icon" width="20" height="20">
+                  <use
+                    class="contact-form-success"
+                    href="./images/sprite.svg#icon-checkmark"
+                    width="20"
+                    height="20"
+                  ></use>
+                  <use
+                    class="contact-form-error"
+                    href="./images/sprite.svg#icon-cross"
+                    width="20"
+                    height="20"
+                  ></use>
+                </svg>
+              </div>
+
               <button type="submit" class="button primary">Make an appointment</button>
             </form>
 
@@ -621,6 +671,7 @@
       </div>
     </footer>
 
+    <!-- Modal -->
     <div class="backdrop is-hidden" data-backdrop>
       <div class="modal">
         <button class="modal-btn" data-close-modal>
@@ -770,19 +821,14 @@
               <use class="icon-unchecked" href="./images/sprite.svg#icon-unchecked"></use>
               <use class="icon-checked" href="./images/sprite.svg#icon-checked"></use>
             </svg>
-            <span class="register-form-agreement-text"
+            <span class="register-form-agreement-text "
               >I agree to the newsletter and accept
               <a class="register-form-agreement-link" href="">The terms of the agreement</a></span
             >
           </label>
 
-          <button class="button primary btn" type="submit">
-            Send
-          </button>
-          <button class="button secondary" type="submit">
-            Reset
-          </button>
-  
+          <button class="button primary btn" type="submit">Send</button>
+          <button class="button secondary" type="submit">Reset</button>
         </form>
       </div>
     </div>
