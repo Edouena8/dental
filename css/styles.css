@@ -873,6 +873,7 @@
 
 .footer .text-link {
   margin-right: 80px;
+  text-underline-position: under;
 }
 
 .footer .text {
@@ -1041,7 +1042,7 @@
   transition: opacity 250ms var(--timing-function);
 }
 
-.register-form-agreement-text{
+.register-form-agreement-text {
   margin-left: 8px;
   font-size: 14px;
   text-underline-position: under;
@@ -1090,126 +1091,72 @@
   opacity: 1;
   transform: scale(1);
 }
-/* .form {
-  width: 600px;
-  outline: 1px solid tomato;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-}
 
-.form-field {
-  position: relative;
+/* Patient */
+
+.patient-list {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-.form-field label {
-  margin-bottom: 5px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.form-field input {
-  margin: 0;
-  padding: 6px 10px;
+.patient-item {
+  width: 450px;
 }
 
-.group-title {
-  margin-top: 0;
-  margin-bottom: 10px;
+.patient-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  transition: box-shadow 250ms var(--timing-function), transform 250ms var(--timing-function);
 }
 
-.group-options,
-.group-experience {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.patient-link:hover,
+.patient-link:focus{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.form .date {
-  border-width: 2px;
-  border-radius: 4px;
-  padding: 20px 40px;
-}
-
-.comment {
-  padding: 8px;
-} */
-
-/* .checkbox-field{
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.checkbox {
-  appearance: none;
-}
-
-.checkbox-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid black;
-  border-radius: 4px;
-
-  transition: transform 250ms var(--timing-function);
-}
-
-.checkbox:checked + .checkbox-icon{
-  transform: scale(1.2);
-  background-color: green;
-}
-
-.checkbox-label{
-  transition: transform 250ms var(--timing-function);
-}
-
-.checkbox:checked ~ .checkbox-label{
-  transform: translateX(20px);
-}
-
-
-
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
-  transform: translateY(-50px);
-  color: red;
-}
-
-.form-label {
-  position: absolute;
-  top: 50%;
-  left: 30px;
-  transform: translateY(-50%);
-
-  transition: transform 250ms var(--timing-function);
-} */
-
-/* .form-group{
+.patient-cards{
   position: relative;
+  overflow: hidden;
 }
 
-.form-label{
+.patient-overlay{
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 10px 15px;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+  background-color: var(--accent-bg-color);
 }
 
-.form-warning,
-.form-error{
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
+.patient-link:hover .patient-overlay,
+.patient-link:focus .patient-overlay {
+  transform: translateY(0);
 }
 
-.form-warning{
-  background-color: green;
+.patient-wrapper {
+  padding: 10px 15px;
 }
 
-.form-error{
-  background-color: red;
-} */
+.patient-title {
+  color: var(--secondary-content-color);
+  font-size: 18px;
+  line-height: 1.3;
+  user-select: none;
+}
+
+.patient-main-title {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
