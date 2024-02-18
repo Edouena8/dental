@@ -190,6 +190,30 @@
   color: var(--primary-content-color);
   font-size: 48px;
   line-height: 1.04;
+
+  /* animation: fade-in 500ms ease 100ms 3 alternate fill-mode;
+  transform-origin: left center; */
+}
+
+.main-title {
+  animation: fade-in 800ms ease 500ms 1 backwards alternate;
+  transform-origin: left center;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px) scale(0.2);
+  }
+
+  25%{
+    opacity: 1;
+    transform: translateX(0px) scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
 
 .hero .text {
@@ -775,6 +799,8 @@
   flex-wrap: wrap;
   column-gap: 15px;
   row-gap: 60px;
+
+  perspective: 1000px;
 }
 
 .doc-list > .item {
@@ -782,6 +808,7 @@
   display: flex;
   border-radius: 6px;
   background-image: linear-gradient(to right, #f7faf7, #eff0f4);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .dentist-info {
@@ -904,7 +931,7 @@
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal{
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
@@ -920,7 +947,7 @@
 
   background-color: #fff;
   border-radius: 20px;
-transition: transform 500ms var(--timing-function);
+  transition: transform 500ms var(--timing-function);
 }
 
 .modal-btn {
@@ -1125,16 +1152,16 @@ transition: transform 500ms var(--timing-function);
 }
 
 .patient-link:hover,
-.patient-link:focus{
+.patient-link:focus {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.patient-cards{
+.patient-cards {
   position: relative;
   overflow: hidden;
 }
 
-.patient-overlay{
+.patient-overlay {
   position: absolute;
   top: 0;
   left: 0;

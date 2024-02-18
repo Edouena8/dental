@@ -75,7 +75,7 @@ p {
   width: 1500px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 
 .section {
