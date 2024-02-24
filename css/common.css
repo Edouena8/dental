@@ -90,7 +90,7 @@ p {
 
 /* Slider icon */
 
-.slider-btn{
+.slider__btn{
   width: 40px;
   height: 40px;
   padding: 0;
@@ -107,7 +107,7 @@ p {
   transition: opacity 250ms var(--timing-function);
 }
 
-.slider-icon{
+.slider__icon{
   fill: #2E3A59;
 }
 
@@ -127,7 +127,7 @@ p {
 /* Icons for validation */
 
 .register-form-valid-icon,
-.contact-form-valid-icon {
+.contact-form__icon-wrap {
   position: absolute;
   top: 50%;
   right: 15px;
@@ -137,8 +137,7 @@ p {
 
 .register-form-success,
 .register-form-error,
-.contact-form-success,
-.contact-form-error {
+.contact-form__valid-icon {
   opacity: 0;
   transform: scale(0.4);
   transform-origin: center;
@@ -146,11 +145,11 @@ p {
 }
 
 .register-form-error,
-.contact-form-error {
+.contact-form__valid-icon--error {
   fill: red;
 }
 
 .register-form-success,
-.contact-form-success {
+.contact-form__valid-icon--success {
   fill: green;
 }

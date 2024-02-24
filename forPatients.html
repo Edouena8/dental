@@ -26,90 +26,103 @@
     <!-- Header -->
     <header class="header" data-header>
       <div class="container wrap">
-        <a href="/" class="logo">
+        <a href="/" class="logo header__logo">
           <img src="./images/logo.svg" />
         </a>
 
-        <ul class="list social-links">
+        <ul class="list social-links header__social-links">
           <li>
             <a
-              class="link"
+              class="social-links__link"
               href="google.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Google link"
               title="Google"
             >
-              <svg class="social-icon" width="20" height="20">
+              <svg class="social-links__icon" width="20" height="20">
                 <use href="./images/sprite.svg#icon-google"></use>
               </svg>
             </a>
           </li>
           <li>
             <a
-              class="link"
+              class="social-links__link"
               href="instagram.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Instagram link"
               title="Instagram"
             >
-              <svg class="social-icon" width="20" height="20">
+              <svg class="social-links__icon" width="20" height="20">
                 <use href="./images/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a
-              class="link"
+              class="social-links__link"
               href="linkedin.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Lonkedin link"
               title="linkedin"
             >
-              <svg class="social-icon" width="20" height="20">
+              <svg class="social-links__icon" width="20" height="20">
                 <use href="./images/sprite.svg#icon-linkedin"></use>
               </svg>
             </a>
           </li>
         </ul>
 
-        <nav>
-          <ul class="site-nav list">
-            <li class="item"><a href="./index.html" class="link">About</a></li>
-            <li class="item"><a href="#services" class="link">Services</a></li>
-            <li class="item"><a href="#specialists" class="link">Specialists</a></li>
-            <li class="item"><a href="./forPatients.html" class="link current">For patients</a></li>
-            <li class="item"><a href="" class="link">Contacts</a></li>
+        <nav class="site-nav">
+          <ul class="site-nav__list list">
+            <li class="item site-nav__item">
+              <a href="./index.html" class="site-nav__link link site-nav__link--current">About</a>
+            </li>
+            <li class="item site-nav__item">
+              <a href="#services" class="link site-nav__link">Services</a>
+            </li>
+            <li class="item site-nav__item">
+              <a href="#specialists" class="link site-nav__link">Specialists</a>
+            </li>
+            <li class="item site-nav__item">
+              <a href="./forPatients.html" class="link site-nav__link">For patients</a>
+            </li>
+            <li class="item site-nav__item"><a href="" class="link site-nav__link">Contacts</a></li>
           </ul>
         </nav>
 
         <div class="contact-info">
           <div class="address-thumb">
-            <svg class="address-icon" width="16" height="20">
+            <svg class="address-thumb__icon" width="16" height="20">
               <use href="./images/sprite.svg#icon-location"></use>
             </svg>
-            <p class="address">
+            <p class="address-thumb__data">
               Kharkiv, <br />
               Pushkinska 1A
             </p>
           </div>
 
           <div class="time-thumb">
-            <svg class="calendar-icon" width="18" height="20">
+            <svg class="time-thum__icon" width="18" height="20">
               <use href="./images/sprite.svg#icon-calendar"></use>
             </svg>
-            <p class="time">from 09:00 - 20:00 <span>Mon-Sat</span></p>
+            <p class="time-thum__data">from 09:00 - 20:00 <span>Mon-Sat</span></p>
           </div>
 
-          <a href="tel:+79003331040" title="Clinic phone number" class="phone">
-            <svg class="phone-icon" width="16" height="16">
+          <a href="tel:+79003331040" title="Clinic phone number" class="phone-link">
+            <svg class="phone-link__icon" width="16" height="16">
               <use href="./images/sprite.svg#icon-phone"></use>
             </svg>
             +7900 333 10 40
           </a>
-          <button type="button" class="button secondary">Request a call</button>
+          <button
+            type="button"
+            class="button secondary animate__animated animate__fadeInRight animate__delay-5s"
+          >
+            Request a call
+          </button>
         </div>
       </div>
     </header>
@@ -224,61 +237,61 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container footer-wrap">
-        <ul class="list social-links">
+      <div class="container footer__wrap">
+        <ul class="list social-links footer__social-links">
           <li>
             <a
-              class="link"
+              class="social-links__link link"
               href="google.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Google link"
               title="Google"
             >
-              <svg class="social-icon" width="33" height="34">
+              <svg class="social-links__icon" width="33" height="34">
                 <use href="./images/sprite.svg#icon-google"></use>
               </svg>
             </a>
           </li>
           <li>
             <a
-              class="link"
+              class="social-links__link link"
               href="instagram.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Instagram link"
               title="Instagram"
             >
-              <svg class="social-icon" width="34" height="34">
+              <svg class="social-links__icon" width="34" height="34">
                 <use href="./images/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a
-              class="link"
+              class="social-links__link link"
               href="linkedin.com"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Lonkedin link"
               title="linkedin"
             >
-              <svg class="social-icon" width="34" height="34">
+              <svg class="social-links__icon" width="34" height="34">
                 <use href="./images/sprite.svg#icon-linkedin"></use>
               </svg>
             </a>
           </li>
         </ul>
 
-        <div class="info-wrap">
-          <div class="text-wrap">
-            <p class="text">
+        <div class="footer__meta">
+          <div class="footer__text-wrap">
+            <p class="footer__text">
               Dent LLC, license No. LO-86-8681-01868686047 dated February 13, 2023.
             </p>
-            <p class="text">&copy; 2018-2021</p>
+            <p class="footer__text">&copy; 2018-2021</p>
           </div>
 
-          <a href="" title="Processing of personal data" class="text text-link"
+          <a href="" title="Processing of personal data" class="footer__text-link"
             >Policy regarding the processing <br />
             of personal data</a
           >
